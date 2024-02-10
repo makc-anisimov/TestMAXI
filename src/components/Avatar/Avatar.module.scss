@@ -1,0 +1,17 @@
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: cadetblue;
+}
+
+.avatar__symb {
+  display: flex;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(52, 86, 87);
+}

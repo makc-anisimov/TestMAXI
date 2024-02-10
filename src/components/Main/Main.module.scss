@@ -1,0 +1,78 @@
+
+.users {
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: azure;
+}
+.users__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 48px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+// .users__cell {
+//   margin-right: 10px;
+//   display: flex;
+//   border-radius: 5px;
+//   // font-family: 'Inter', Arial, sans-serif;
+//   // font-size: 18px;
+//   // font-weight: 400;
+//   border: solid 1px rgb(85, 160, 165);
+//   &:last-child {
+//     margin-right: 0;
+//   }
+// }
+%baseButtonStyle {
+  margin-right: 10px;
+  display: flex;
+  border-radius: 5px;
+  // font-family: 'Inter', Arial, sans-serif;
+  // font-size: 18px;
+  // font-weight: 400;
+  // border: solid 1px rgb(85, 160, 165);
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.users__cell_check {
+  @extend %baseButtonStyle;
+
+}
+
+.users__cell_id {
+  @extend %baseButtonStyle;
+  width: 48px;
+}
+
+.users__cell_avatar {
+  @extend %baseButtonStyle;
+}
+.users__cell_name {
+  @extend %baseButtonStyle;
+  width: 248px;
+}
+
+.users__cell_username {
+  @extend %baseButtonStyle;
+  width: 168px;
+}
+
+.users__cell_email {
+  @extend %baseButtonStyle;
+  width: 240px;
+  min-height: 48px;
+}
+
+.users__cell_phone {
+  @extend %baseButtonStyle;
+  width: 160px;
+}
+
+.users__cell_zipcode {
+  @extend %baseButtonStyle;
+  width: 128px;
+}
