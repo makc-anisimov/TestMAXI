@@ -1,0 +1,97 @@
+.users {
+  width: calc(100% - 40px);
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: azure;
+}
+
+.users__list {
+  padding: 0;
+}
+
+.users__button {
+  margin: 10px;
+  min-height: 40px;
+  border-radius: 12px;
+  border: 1px solid darkcyan;
+  color: darkcyan;
+
+
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.users__title {
+  display: flex;
+  background-color: rgb(134, 170, 170);
+}
+
+%baseStyle {
+  min-height: 32px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+    align-items: center;
+  // border-radius: 5px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  // background-color: rgb(0, 177, 177);
+  outline: 1px solid gray;
+  outline-style: unset;
+border-right: 1px solid gray;
+// padding: 5px;
+
+
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.users__title_check {
+  @extend %baseStyle;
+  width: 16px;
+  cursor: pointer;
+}
+
+.users__title_id {
+  @extend %baseStyle;
+  width: 24px;
+  cursor: pointer;
+}
+
+.users__title_avatar {
+  @extend %baseStyle;
+  width: 36px;
+}
+
+.users__title_name {
+  @extend %baseStyle;
+  width: 248px;
+  cursor: pointer;
+}
+
+.users__title_username {
+  @extend %baseStyle;
+  width: 168px;
+}
+
+.users__title_email {
+  @extend %baseStyle;
+  width: 240px;
+}
+
+.users__title_phone {
+  @extend %baseStyle;
+  width: 160px;
+}
+
+.users__title_zipcode {
+  @extend %baseStyle;
+  width: 128px;
+  cursor: pointer;
+}

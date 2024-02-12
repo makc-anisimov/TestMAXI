@@ -1,0 +1,72 @@
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 48px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: 1px solid darkcyan;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+// .users__row_title {
+//   display: flex;
+// }
+
+%baseStyle {
+  // padding: 5px;
+  margin-right: 10px;
+  display: flex;
+  // border-radius: 5px;
+// border-right: 1px solid gray;
+
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.user__check {
+  @extend %baseStyle;
+  width: 16px;
+  cursor: pointer;
+}
+
+.user__id {
+  @extend %baseStyle;
+  width: 24px;
+}
+
+.user__avatar {
+  @extend %baseStyle;
+  width: 36px;
+}
+
+.user__name {
+  @extend %baseStyle;
+  width: 248px;
+}
+
+.user__username {
+  @extend %baseStyle;
+  width: 168px;
+}
+
+.user__email {
+  @extend %baseStyle;
+  width: 240px;
+}
+
+.user__phone {
+  @extend %baseStyle;
+  width: 160px;
+}
+
+.user__zipcode {
+  @extend %baseStyle;
+  width: 128px;
+}
