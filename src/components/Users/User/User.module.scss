@@ -18,9 +18,17 @@
 // }
 
 %baseStyle {
-  // padding: 5px;
-  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+
+  // box-shadow:inset 0px 0px 0px 1px #f00;
+  border-right: 1px inset azure;
+  min-height: 36px;
+  // padding-left: 5px;
+  // margin-right: 10px;
   display: flex;
+// border-right: 1px solid gray;
+
   // border-radius: 5px;
 // border-right: 1px solid gray;
 
@@ -48,12 +56,12 @@
 
 .user__name {
   @extend %baseStyle;
-  width: 248px;
+  width: 264px;
 }
 
 .user__username {
   @extend %baseStyle;
-  width: 168px;
+  width: 180px;
 }
 
 .user__email {
@@ -63,10 +71,11 @@
 
 .user__phone {
   @extend %baseStyle;
-  width: 160px;
+  width: 240px;
 }
 
 .user__zipcode {
   @extend %baseStyle;
-  width: 128px;
+  width: calc(100% - 1000px);
+  // width: 128px;
 }

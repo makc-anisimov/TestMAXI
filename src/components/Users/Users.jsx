@@ -3,35 +3,31 @@ import styles from './Users.module.scss';
 import { User } from './User/User';
 import { useEffect, useState } from 'react';
 
-export function Users() {
+export function Users({
+  checkedIds,
+  toggleCheck,
+}) {
 
-  const [checkedIds, setCheckedIds] = useState([]); // храним список выделенных пользователей
   const usersData = useSelector(state => state.users.users);
 
-  //проверка массива выбранных
-  useEffect(() => {
-    console.log('checkedIds', checkedIds);
-  }, [checkedIds]);
+
+  // //проверка массива выбранных
+  // useEffect(() => {
+  //   console.log('checkedIds', checkedIds);
+  // }, [checkedIds]);
 
 
-  const toggleCheck = ({ deleteId }) => {
-    if (!(checkedIds.includes(deleteId))) {
-      setCheckedIds([...checkedIds, deleteId]);
-    }
-    else {
-      setCheckedIds(checkedIds.filter(id => (id !== deleteId)));
-    }
-  }
+  // const checkButtonActive = (length) => {
+  //   if (length > 0) {
+  //     return 
+  //   }
+  // }
+
+
 
   return (
-    <main className={styles.users}>
+    <div className={styles.users}>
       {/* TODO! сделать форму для фильтрации + кнопки */}
-      <button
-        className={styles.users__button}
-        onClick={() => console.log('add user')} >
-        Добавить пользователя
-      </button>
-      <button className={styles.users__button} onClick={() => console.log('delete user')}>Удалить пользователей</button>
 
       <ul className={styles.users__list}>
         <li className={styles.users__title}  >
@@ -60,6 +56,6 @@ export function Users() {
           <User user={user} onCheck={toggleCheck} key={user.id} />
         ))}
       </ul>
-    </main>
+    </div>
   )
 }
