@@ -8,11 +8,26 @@ export function PopupAddUser({
   isOpened,
   onClose,
   addUser,
+  users,
 }) {
 
+  const getlastIndex = (array) => {
+    console.log(array);
+    let maxID = 0;
+    for (let i = 0; i < array.length; i++) {
+      const currentID = array[i].id;
+      if (currentID > maxID) {
+        maxID = currentID;
+      }
+    }
+    return (maxID + 1);
+  }
+
   const handleSubmit = (values, actions) => {
-    console.log('values', values);
-    addUser(values);
+    addUser({
+      values,
+      id: getlastIndex(users),
+    });
     actions.resetForm({
       values: {
         name: '',

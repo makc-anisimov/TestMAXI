@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { MAIN_URL } from "../utils/const";
-import { connect } from "react-redux";
 
 export const fetchUsers = createAsyncThunk(
   'users/fetchUsers',
@@ -20,19 +19,6 @@ export const fetchUsers = createAsyncThunk(
   }
 );
 
-const getlastIndex = (array) => {
-  let maxID = 0;
-  // Перебор массива объектов
-  for (let i = 0; i < array.length; i++) {
-    const currentID = array[i].ID;
-    // Проверка нахождения текущего ID больше максимального
-    if (currentID > maxID) {
-      maxID = currentID;
-    }
-  }
-  return (maxID + 1);
-}
-
 const userSlice = createSlice({
   name: 'users',
   initialState: {
@@ -42,25 +28,19 @@ const userSlice = createSlice({
   },
   reducers: {
     createUser(state, action) {
-      // const users2 = getSta
-      // console.log('action.payload', action.payload);
-      // // console.log(current(state));
-      // console.log('users2', users2);
-      // console.log(getlastIndex(state.users));
-
-// state.users.push(action.payload);
+      console.log(action.payload);
       state.users.push({
-        // ID: getlastIndex(state.users),
-        name: action.payload.name,
-        username: action.payload.username,
-        email: action.payload.name,
-        phone: action.payload.name,
-        zipcode: action.payload.zipcode || '',
+        name: action.payload.values.name,
+        username: action.payload.values.username,
+        email: action.payload.values.email,
+        phone: action.payload.values.phone,
+        address: {
+          zipcode: action.payload.values.zipcode || '',
+        },
+        id: action.payload.id,
       })
     },
     removeUsers(state, action) {
-      console.log('action',action);
-      
       state.users = state.users.filter(user => !(action.payload.includes(user.id)))
     },
 

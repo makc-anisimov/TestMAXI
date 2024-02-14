@@ -36,7 +36,7 @@ export const User = ({
         {user.phone}
       </div>
       <div className={styles.user__zipcode}>
-        {user.address.zipcode}
+        {user.address?.zipcode}
       </div>
     </li>
   )

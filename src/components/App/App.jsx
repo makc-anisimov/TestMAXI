@@ -36,9 +36,10 @@ function App() {
     }
   }
 
+
   const dispatch = useDispatch();
 
-  const { status, error } = useSelector(state => state.users);
+  const { status, error, users } = useSelector(state => state.users);
 
   const addUser = (data) => dispatch(createUser(data));
 
@@ -51,6 +52,8 @@ function App() {
   useEffect(() => {
     dispatch(fetchUsers());
   }, [dispatch]);
+
+
 
   return (
     <div className={styles.App}>
@@ -84,6 +87,7 @@ function App() {
           isOpened={isPopupAddUserOpened}
           onClose={closeAllPopups}
           addUser={addUser}
+          users={users}
         />
       </main>
     </div>
