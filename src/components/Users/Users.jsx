@@ -4,26 +4,11 @@ import { User } from './User/User';
 import { useEffect, useState } from 'react';
 
 export function Users({
-  checkedIds,
+  // checkedIds,
   toggleCheck,
 }) {
 
   const usersData = useSelector(state => state.users.users);
-
-
-  // //проверка массива выбранных
-  // useEffect(() => {
-  //   console.log('checkedIds', checkedIds);
-  // }, [checkedIds]);
-
-
-  // const checkButtonActive = (length) => {
-  //   if (length > 0) {
-  //     return 
-  //   }
-  // }
-
-
 
   return (
     <div className={styles.users}>

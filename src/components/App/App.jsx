@@ -16,7 +16,7 @@ function App() {
 
   const closeAllPopups = () => {
     setIsPopupConfirmDeleteOpened(false);
-    setIsPopupConfirmDeleteOpened(false);
+    setIsPopupAddUserOpened(false);
   }
 
   const openPopupAddUser = () => {
@@ -24,7 +24,7 @@ function App() {
   };
 
   const openPopupConfirmDelete = () => {
-    setIsPopupConfirmDeleteOpened(true)
+    setIsPopupConfirmDeleteOpened(true);
   };
 
   const toggleCheck = ({ deleteId }) => {
@@ -36,25 +36,21 @@ function App() {
     }
   }
 
-
-
   const dispatch = useDispatch();
+
   const { status, error } = useSelector(state => state.users);
 
-  const addUser = () => dispatch(createUser());
+  const addUser = (data) => dispatch(createUser(data));
 
-  const deleteUsers = () => dispatch(removeUsers(checkedIds));
+  const deleteUsers = () => {
+    
+    dispatch(removeUsers(checkedIds));
+    setCheckedIds([]);
+  }
 
   useEffect(() => {
     dispatch(fetchUsers());
   }, [dispatch]);
-
-  //проверка массива выбранных
-  useEffect(() => {
-    console.log('checkedIds', checkedIds);
-  }, [checkedIds]);
-
-
 
   return (
     <div className={styles.App}>
@@ -76,14 +72,19 @@ function App() {
         {status === 'loading' && <h2>Loading...</h2>}
         {error && <h2>{error}</h2>}
         <Users
-          checkedIds={checkedIds}
+          // checkedIds={checkedIds}
           toggleCheck={toggleCheck}
         />
         <PopupConfirmDelete
           isOpened={isPopupConfirmDeleteOpened}
           onClose={closeAllPopups}
-          removeUsers={deleteUsers} />
-        <PopupAddUser isOpened={isPopupAddUserOpened} />
+          removeUsers={deleteUsers}
+        />
+        <PopupAddUser
+          isOpened={isPopupAddUserOpened}
+          onClose={closeAllPopups}
+          addUser={addUser}
+        />
       </main>
     </div>
   );
