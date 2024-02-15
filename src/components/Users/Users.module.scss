@@ -1,0 +1,100 @@
+.users {
+  width: calc(100% - 40px);
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto 0;
+  background-color: azure;
+}
+
+.users__list {
+  list-style: none;
+  padding: 0;
+}
+
+.users__title {
+  display: flex;
+  background-color: rgb(134, 170, 170);
+}
+
+%baseStyle {
+  min-height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: rgb(134, 170, 170);
+  outline: 1px solid gray;
+  outline-style: unset;
+  border: none;
+  border-right: 1px inset gray;
+
+  &:last-child {
+    margin-right: 0;
+    border-right: none;
+  }
+}
+
+.users__title_active {
+  background-color: darkcyan;
+}
+
+.users__title_check {
+  @extend %baseStyle;
+  width: 16px;
+  // cursor: pointer;
+}
+
+.users__title_id {
+  @extend %baseStyle;
+  width: 42px;
+  cursor: pointer;
+
+  &:active {
+    background: red;
+    transition: background 1s;
+  }
+}
+
+.users__title_avatar {
+  @extend %baseStyle;
+  width: 36px;
+}
+
+.users__title_name {
+  @extend %baseStyle;
+  width: 264px;
+  cursor: pointer;
+
+  &:active {
+    background: red;
+    transition: background 1s;
+  }
+}
+
+.users__title_username {
+  @extend %baseStyle;
+  width: 180px;
+}
+
+.users__title_email {
+  @extend %baseStyle;
+  width: 240px;
+}
+
+.users__title_phone {
+  @extend %baseStyle;
+  width: 240px;
+}
+
+.users__title_zipcode {
+  @extend %baseStyle;
+  width: calc(100% - 1000px);
+  cursor: pointer;
+
+  &:active {
+    background: red;
+    transition: background 1s;
+  }
+}

@@ -1,0 +1,81 @@
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 48px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: 1px solid darkcyan;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+// .users__row_title {
+//   display: flex;
+// }
+
+%baseStyle {
+  justify-content: center;
+  align-items: center;
+
+  // box-shadow:inset 0px 0px 0px 1px #f00;
+  border-right: 1px inset azure;
+  min-height: 36px;
+  // padding-left: 5px;
+  // margin-right: 10px;
+  display: flex;
+// border-right: 1px solid gray;
+
+  // border-radius: 5px;
+// border-right: 1px solid gray;
+
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.user__check {
+  @extend %baseStyle;
+  width: 16px;
+  cursor: pointer;
+}
+
+.user__id {
+  @extend %baseStyle;
+  width: 42px;
+}
+
+.user__avatar {
+  @extend %baseStyle;
+  width: 36px;
+}
+
+.user__name {
+  @extend %baseStyle;
+  width: 264px;
+}
+
+.user__username {
+  @extend %baseStyle;
+  width: 180px;
+}
+
+.user__email {
+  @extend %baseStyle;
+  width: 240px;
+}
+
+.user__phone {
+  @extend %baseStyle;
+  width: 240px;
+}
+
+.user__zipcode {
+  @extend %baseStyle;
+  width: calc(100% - 1000px);
+  // width: 128px;
+}

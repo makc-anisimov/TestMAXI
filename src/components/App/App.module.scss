@@ -1,0 +1,105 @@
+.App {
+  text-align: center;
+}
+
+.actions {
+  margin: 0 auto;
+  width: calc(100% - 40px);
+  max-width: 1240px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  margin-right: 10px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid darkcyan;
+  color: rgb(0, 99, 99);
+  background-color: rgb(100, 204, 169);
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+
+  &_notActive {
+    border: 1px solid rgb(122, 138, 138);
+    color: rgb(122, 138, 138);
+    background-color: rgb(188, 202, 198);
+    cursor: auto;
+  }
+}
+
+.filter__container {
+  margin: 10px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: lightcyan dashed 1px;
+  background-color: rgb(255, 255, 255);
+  box-shadow:
+    0px 1px 0px darkcyan,
+    0px -1px 0px darkcyan,
+    1px 0px 0px darkcyan,
+    -1px 0px 0px darkcyan;
+}
+
+.filter__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.filter__input {
+  margin-left: 10px;
+  border: none;
+  color: rgb(0, 99, 99);
+  background-color: rgb(255, 255, 255);
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+
+  &:focus {
+    outline: none;
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+.filter__select {
+  border-radius: 10px;
+  border: none;
+  color: rgb(0, 99, 99);
+  background-color: rgb(255, 255, 255);
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.filter__button {
+  border: none;
+  background-color: rgb(255, 255, 255);
+  margin-right: 6px;
+  background-image: url(../../shared/images/filter.svg);
+  background-size: contain;
+  border-radius: 5px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow:
+      0px 1px 0px darkcyan,
+      0px -1px 0px darkcyan,
+      1px 0px 0px darkcyan,
+      -1px 0px 0px darkcyan;
+  }
+}

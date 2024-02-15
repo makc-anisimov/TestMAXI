@@ -1,0 +1,9 @@
+@import url('../src/vendor/normalize.css');
+@import url('../src/vendor/fonts/Inter-Web/inter.css');
+
+body {
+  margin: 0, auto;
+  background-color: rgb(178, 203, 204);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
