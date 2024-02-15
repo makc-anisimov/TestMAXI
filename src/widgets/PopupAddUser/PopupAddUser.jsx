@@ -126,7 +126,7 @@ export function PopupAddUser({
             <div className={styles.popup__field}>
               <label className={styles.popup__input_title}>phone:</label>
               <Field
-                type='text'
+                type='tel'
                 name='phone'
                 className={styles.popup__input}
                 // validate={validatePhone}

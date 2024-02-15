@@ -44,9 +44,34 @@ const userSlice = createSlice({
       state.users = state.users.filter(user => !(action.payload.includes(user.id)))
     },
 
-    addUsers(state, action) {
-      console.log('test addusers');
+    filterUser(state, action) {
+       const { name, value } = action.payload;
+       if (value) {
+        state.users = state.users.filter(user => user[name].toLowerCase().includes(value.toLowerCase()));
+       }
+       else 
+      console.log('action', action.payload);
+
     },
+
+    sortUsers(state, action) {
+      const fieldName = action.payload;
+
+      switch (fieldName) {
+        case 'name':
+          state.users = state.users.sort((a, b) => a[fieldName][0] > b[fieldName][0] ? 1 : -1)
+          break;
+        case 'zipcode':
+          state.users = state.users.sort((a, b) => a.address[fieldName][0] > b.address[fieldName][0] ? 1 : -1)
+          break;
+        case 'id':
+          state.users = state.users.sort((a, b) => a.id > b.id ? 1 : -1)
+          break;
+        default:
+          console.log('Сортировка по умолчанию');
+      }
+
+    }
 
   },
   extraReducers: (builder) => {
@@ -56,6 +81,7 @@ const userSlice = createSlice({
         state.error = null;
       })
       .addCase(fetchUsers.fulfilled, (state, action) => {
+        console.log(action.payload);
         state.status = 'resolved';
         state.users = action.payload;
       })
@@ -66,5 +92,10 @@ const userSlice = createSlice({
   },
 });
 
-export const { createUser, removeUsers, addUsers } = userSlice.actions;
+export const {
+  createUser,
+  removeUsers,
+  filterUser,
+  sortUsers
+} = userSlice.actions;
 export default userSlice.reducer;

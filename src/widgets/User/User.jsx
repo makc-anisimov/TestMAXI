@@ -1,4 +1,4 @@
-import { Avatar } from '../../../shared/ui/Avatar/Avatar'
+import { Avatar } from '../../shared/ui/Avatar/Avatar'
 import styles from './User.module.scss'
 
 export const User = ({

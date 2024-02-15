@@ -2,9 +2,19 @@
   text-align: center;
 }
 
+.actions {
+  margin: 0 auto;
+  width: calc(100% - 40px);
+  max-width: 1240px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .button {
-  margin: 10px;
-  min-height: 40px;
+  margin-right: 10px;
+  height: 44px;
   border-radius: 12px;
   border: 1px solid darkcyan;
   color: rgb(0, 99, 99);
@@ -19,5 +29,80 @@
     color: rgb(122, 138, 138);
     background-color: rgb(188, 202, 198);
     cursor: auto;
+  }
+
+}
+
+.filter__container {
+  margin: 10px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: lightcyan dashed 1px;
+  box-shadow: 0px 1px 0px darkcyan, 0px -1px 0px darkcyan, 1px 0px 0px darkcyan, -1px 0px 0px darkcyan;
+  background-color: rgb(255, 255, 255);
+}
+
+.filter__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+// .filter__icon path {
+//   fill: #ff0000;
+// }
+
+.filter__input {
+  // padding-left: 10px;
+  margin-left: 10px;
+  // height: 40px;
+  border: none;
+  color: rgb(0, 99, 99);
+  background-color: rgb(255, 255, 255);
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+
+  &:focus {
+    outline: none;
+    // border-bottom: 1px solid darkcyan;
+  }
+}
+
+.filter__select {
+  border-radius: 10px;
+  border: none;
+  color: rgb(0, 99, 99);
+  background-color: rgb(255, 255, 255);
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+
+  &:focus {
+    outline: none;
+    // border: 1px solid darkcyan;
+  }
+}
+
+.filter__button {
+  // border: 1px solid darkcyan;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  margin-right: 6px;
+
+  background-image: url(../../shared/images/filter.svg);
+  background-size: contain;
+  border-radius: 5px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 1px 0px darkcyan, 0px -1px 0px darkcyan, 1px 0px 0px darkcyan, -1px 0px 0px darkcyan;
+
   }
 }
