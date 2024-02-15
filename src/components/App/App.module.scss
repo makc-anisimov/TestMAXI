@@ -30,7 +30,6 @@
     background-color: rgb(188, 202, 198);
     cursor: auto;
   }
-
 }
 
 .filter__container {
@@ -42,8 +41,12 @@
   justify-content: center;
   border-radius: 10px;
   border: lightcyan dashed 1px;
-  box-shadow: 0px 1px 0px darkcyan, 0px -1px 0px darkcyan, 1px 0px 0px darkcyan, -1px 0px 0px darkcyan;
   background-color: rgb(255, 255, 255);
+  box-shadow:
+    0px 1px 0px darkcyan,
+    0px -1px 0px darkcyan,
+    1px 0px 0px darkcyan,
+    -1px 0px 0px darkcyan;
 }
 
 .filter__icon {
@@ -52,14 +55,8 @@
   margin-right: 10px;
 }
 
-// .filter__icon path {
-//   fill: #ff0000;
-// }
-
 .filter__input {
-  // padding-left: 10px;
   margin-left: 10px;
-  // height: 40px;
   border: none;
   color: rgb(0, 99, 99);
   background-color: rgb(255, 255, 255);
@@ -69,7 +66,7 @@
 
   &:focus {
     outline: none;
-    // border-bottom: 1px solid darkcyan;
+    background-color: rgb(255, 255, 255);
   }
 }
 
@@ -84,16 +81,13 @@
 
   &:focus {
     outline: none;
-    // border: 1px solid darkcyan;
   }
 }
 
 .filter__button {
-  // border: 1px solid darkcyan;
   border: none;
   background-color: rgb(255, 255, 255);
   margin-right: 6px;
-
   background-image: url(../../shared/images/filter.svg);
   background-size: contain;
   border-radius: 5px;
@@ -102,7 +96,10 @@
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0px 1px 0px darkcyan, 0px -1px 0px darkcyan, 1px 0px 0px darkcyan, -1px 0px 0px darkcyan;
-
+    box-shadow:
+      0px 1px 0px darkcyan,
+      0px -1px 0px darkcyan,
+      1px 0px 0px darkcyan,
+      -1px 0px 0px darkcyan;
   }
 }

@@ -6,6 +6,7 @@ import { createUser, removeUsers, filterUser, sortUsers, fetchUsers } from '../.
 import { Users } from '../Users/Users';
 import { PopupConfirmDelete } from '../../widgets/PopupConfirmDelete/PopupConfirmDelete';
 import { PopupAddUser } from '../../widgets/PopupAddUser/PopupAddUser';
+import { Footer } from '../Footer/Footer';
 
 function App() {
 
@@ -134,6 +135,7 @@ function App() {
           users={users}
         />
       </main>
+      <Footer />
     </div>
   );
 }
