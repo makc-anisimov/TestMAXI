@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styles from './PopupAddUser.module.scss'
 import { Field, Form, Formik } from 'formik';
 import { EMAIL_REGEXP, PHONE_REGEXP } from '../../utils/const';
@@ -40,8 +39,6 @@ export function PopupAddUser({
     onClose();
   }
 
-
-
   function validateEmail(value) {
     if (!value) {
       return 'Обязательное поле'
@@ -52,7 +49,7 @@ export function PopupAddUser({
   }
 
   function validatePhone(value) {
-    console.log(value);
+    // console.log(value);
     if (!value) {
       return 'Обязательное поле'
     }
@@ -129,8 +126,8 @@ export function PopupAddUser({
                 type='tel'
                 name='phone'
                 className={styles.popup__input}
-                // validate={validatePhone}
-                validate={validateDefault}
+                validate={validatePhone}
+              // validate={validateDefault}
               />
               <label className={classNames(styles.popup__input_error, { [styles.popup__input_error_visible]: errors.phone && touched.phone })}>
                 {errors.phone}

@@ -49,9 +49,7 @@ const userSlice = createSlice({
        if (value) {
         state.users = state.users.filter(user => user[name].toLowerCase().includes(value.toLowerCase()));
        }
-       else 
-      console.log('action', action.payload);
-
+      //  else console.log('action', action.payload);
     },
 
     sortUsers(state, action) {
@@ -81,7 +79,7 @@ const userSlice = createSlice({
         state.error = null;
       })
       .addCase(fetchUsers.fulfilled, (state, action) => {
-        console.log(action.payload);
+        // console.log(action.payload);
         state.status = 'resolved';
         state.users = action.payload;
       })
