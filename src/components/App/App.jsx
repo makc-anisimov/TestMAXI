@@ -18,7 +18,6 @@ function App() {
   const [checkedIds, setCheckedIds] = useState([]);
   const [nameFilterField, setNameFilterField] = useState('name');
   const [valueFilterField, setValueFilterField] = useState('');
-  const [isfilterErrorVisible, setIsfilterErrorVisible] = useState(false);
 
   const openPopupAddUser = () => {
     setIsPopupAddUserOpened(true);
