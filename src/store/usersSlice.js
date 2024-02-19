@@ -28,7 +28,6 @@ const userSlice = createSlice({
   },
   reducers: {
     createUser(state, action) {
-      console.log(action.payload);
       state.users.push({
         name: action.payload.values.name,
         username: action.payload.values.username,
@@ -79,7 +78,6 @@ const userSlice = createSlice({
         state.error = null;
       })
       .addCase(fetchUsers.fulfilled, (state, action) => {
-        // console.log(action.payload);
         state.status = 'resolved';
         state.users = action.payload;
       })
