@@ -13,7 +13,7 @@ export function Users({
 
   const handleClick = (evt) => {
     setNameColumnSorted(evt.target.name);
-    console.log(evt.target);
+    // console.log(evt.target);
     onClick(evt.target.name);
   };
 
