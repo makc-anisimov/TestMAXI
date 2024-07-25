@@ -1,7 +1,5 @@
 # Приложение для управления списокм пользователей
-
 [Users-list](https://userslist-maxim-anisimovs-projects.vercel.app)
-
 
 Проект создан на основе  [Create React App](https://github.com/facebook/create-react-app).
 
@@ -20,5 +18,3 @@
 ### `npm run build`
 Сборка проекта в директорию `build`.\
 Более подробно [здесь](https://facebook.github.io/create-react-app/docs/deployment).
-
-
